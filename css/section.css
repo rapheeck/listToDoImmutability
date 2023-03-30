@@ -4,16 +4,17 @@
     box-shadow: 0 0 5px #ddd;
 }
 
-@media (max-width: 767px) {
-    .form {
-        grid-template-columns: 1fr;
-    }
-}
 
 .section__mainHeader {
     display: grid;
     grid-template-columns: auto auto;
     justify-content: space-between;
+}
+
+@media (max-width: 767px) {
+    .section__mainHeader {
+        grid-template-columns: 1fr;
+    }
 }
 
 .section__header {
