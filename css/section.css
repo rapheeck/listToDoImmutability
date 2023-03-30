@@ -4,11 +4,16 @@
     box-shadow: 0 0 5px #ddd;
 }
 
+@media (max-width: 767px) {
+    .form {
+        grid-template-columns: 1fr;
+    }
+}
+
 .section__mainHeader {
     display: grid;
     grid-template-columns: auto auto;
     justify-content: space-between;
-    border-bottom: 1px solid lightgrey;
 }
 
 .section__header {
@@ -19,4 +24,5 @@
 
 .section__body {
     padding: 20px;
+    border-top: 1px solid lightgrey;
 }

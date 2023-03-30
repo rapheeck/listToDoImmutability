@@ -89,20 +89,19 @@
     };
 
     const renderButtons = () => {
-        const buttoElement = document.querySelector(".js-buttons");
+        const buttonsElement = document.querySelector(".js-buttons");
 
-        if (tasks.lenght) {
-            buttoElement.innerHTML = "";
+        if (!tasks.length) {
+            buttonsElement.innerHTML = "";
             return;
         }
 
-        buttoElement.innerHTML = `
+        buttonsElement.innerHTML = `
         <button class="buttons__button js-toggleHideDoneTasks">
                 ${hideDoneTasks ? "Pokaż" : "Ukryj"} ukończone
             </button>
             <button class="buttons__button js-markAllDone" 
-                ${tasks.every(({ done }) => done) ? "disabled" : ""}
-            >
+                ${tasks.every(({ done }) => done) ? "disabled" : ""}>
                 Ukończ wszystkie
             </button>
     `;
@@ -110,9 +109,9 @@
 
     const bindButtonsEvents = () => {
         const markAllDoneButton = document.querySelector(".js-markAllDone");
-        //jeśli przycisk istnieje//
+       
         if (markAllDoneButton) {
-            //dodaję event listenera//
+            
             markAllDoneButton.addEventListener("click", markAllDone);
         }
 
@@ -126,9 +125,9 @@
 
     const render = () => {
         renderTasks();
-        renderButtons();
         bindRemoveEvents();
         bindToggleDoneEvents();
+        renderButtons();
         bindButtonsEvents();
     };
 
@@ -149,7 +148,6 @@
 
         const form = document.querySelector(".js-form");
         form.addEventListener("submit", onFormSubmit);
-
     };
 
     init();
