@@ -20,4 +20,4 @@ The "ukończ wyszstkie" button marks all tasks as completed, while the adjacent 
 
 ## Screenshot
 
-![screenshot](https://raw.githubusercontent.com/rapheeck/listtodo/main/images/Zrzut%20ekranu%20(11).png)
+![screenshot](https://raw.githubusercontent.com/rapheeck/listToDoImmutability/main/images/screenshot_3.jpg)
