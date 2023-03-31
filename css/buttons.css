@@ -31,9 +31,6 @@
 }
 
 .buttons__button:disabled {
-    color: whitesmoke;
-}
-
-.buttons__button:disabled {
+    color: lightgrey;
     cursor: not-allowed;
 }

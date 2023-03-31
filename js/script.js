@@ -97,21 +97,21 @@
         }
 
         buttonsElement.innerHTML = `
-        <button class="buttons__button js-toggleHideDoneTasks">
-                ${hideDoneTasks ? "Pokaż" : "Ukryj"} ukończone
+            <button class="buttons__button js-toggleHideDoneTasks">
+            ${hideDoneTasks ? "Pokaż" : "Ukryj"} ukończone
             </button>
             <button class="buttons__button js-markAllDone" 
-                ${tasks.every(({ done }) => done) ? "disabled" : ""}>
-                Ukończ wszystkie
+            ${tasks.every(({ done }) => done) ? "disabled" : ""}>
+            Ukończ wszystkie
             </button>
-    `;
+        `;
     };
 
     const bindButtonsEvents = () => {
         const markAllDoneButton = document.querySelector(".js-markAllDone");
-       
+
         if (markAllDoneButton) {
-            
+
             markAllDoneButton.addEventListener("click", markAllDone);
         }
 
@@ -131,10 +131,13 @@
         bindButtonsEvents();
     };
 
+
     const onFormSubmit = (event) => {
         event.preventDefault();
+
         const newTaskElement = document.querySelector(".js-newTask");
         const newTaskContent = newTaskElement.value.trim();
+
         if (newTaskContent !== "") {
             addNewTask(newTaskContent);
             newTaskElement.value = "";
